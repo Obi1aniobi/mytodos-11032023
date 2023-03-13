@@ -67,13 +67,14 @@ export default function EditTodos(props){
 }*/
 
 import React, {useEffect, useState} from 'react'
-import { useParams, redirect } from 'react-router-dom'
+import { useParams, useNavigate } from 'react-router-dom'
 
 
 export default function EditTodo(props){
     const { todoId } = useParams()
     const [task, setTask] = useState('')
     const [complete, setComplete] = useState(false)
+    const navigate = useNavigate(); 
 
 
 
@@ -105,7 +106,7 @@ export default function EditTodo(props){
                  const body = await response.json()
                  console.log(body)
                  //props.done()
-                 redirect("/")
+                 navigate("/")
 
         }catch(err){
             console.error(err)
