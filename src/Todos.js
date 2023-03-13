@@ -122,7 +122,7 @@ export default function Todos(){
                 return (<tr key={index}>
                   <td>{item.todo}</td>
                   <td>
-                     <a href={`/edit-todo/${item.id}`}>Edit</a>
+                     <a href={`#/edit-todo/${item.id}`}>Edit</a>
                   </td>
                   <td>
                     <button onClick={()=> deleteTodo(item.id)}>Delete</button>
