@@ -67,7 +67,7 @@ export default function EditTodos(props){
 }*/
 
 import React, {useEffect, useState} from 'react'
-import { useParams } from 'react-router-dom'
+import { useParams, redirect } from 'react-router-dom'
 
 
 export default function EditTodo(props){
@@ -104,7 +104,8 @@ export default function EditTodo(props){
 
                  const body = await response.json()
                  console.log(body)
-                 props.done()
+                 //props.done()
+                 redirect("/")
 
         }catch(err){
             console.error(err)
